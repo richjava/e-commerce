@@ -1,0 +1,28 @@
+{
+  "modulePages": [
+    {
+      "title": "Home Base",
+      "name": "homeBase",
+      "page": { "name": "home" },
+      "sections": [{ "name": "homeLanding" }]
+    },
+    {
+      "title": "Shop Product Article",
+      "name": "shopProductArticle",
+      "page": { "name": "productArticle" },
+      "sections": [{ "name": "productArticleLanding" }]
+    },
+    {
+      "title": "Shop Category Article",
+      "name": "shopCategoryArticle",
+      "page": { "name": "categoryArticle" },
+      "sections": [{ "name": "categoryArticleLanding" }]
+    },
+    {
+      "title": "Shop Product Category List",
+      "name": "shopProductCategoryList",
+      "page": { "name": "productCategoryList" },
+      "sections": [{ "name": "productCategoryListLanding" }]
+    }
+  ]
+}

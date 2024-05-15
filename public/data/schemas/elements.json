@@ -1,0 +1,9 @@
+{
+  "elements": [
+    {
+      "name": "test",
+      "title": "Test",
+      "fields": { "name": { "type": "string" } }
+    }
+  ]
+}

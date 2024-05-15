@@ -1,0 +1,6 @@
+{
+  "layout": {
+    "sections": [{ "name": "header" }, { "name": "footer" }],
+    "contentIndex": 1
+  }
+}

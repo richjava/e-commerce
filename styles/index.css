@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './globals.css';
+
+/* Custom base styles */
+@layer base {
+}
+
+/* Custom components */
+@layer components {
+}
+
+/* Custom utilities */
+@layer utilities {
+}

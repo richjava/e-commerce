@@ -1,0 +1,35 @@
+{
+  "sections": {
+    "header": { "name": "header", "type": "layout" },
+    "footer": { "name": "footer", "type": "layout" },
+    "homeLanding": {
+      "name": "homeLanding",
+      "type": "body",
+      "fields": {
+        "heading": { "type": "string" },
+        "blurb": { "type": "text" },
+        "image1": { "type": "image" },
+        "image2": { "type": "image" }
+      }
+    },
+    "newestProducts": {
+      "name": "newestProducts",
+      "type": "body",
+      "fields": { "heading": { "type": "string" } }
+    },
+    "productArticleLanding": {
+      "name": "productArticleLanding",
+      "type": "body",
+      "fields": {}
+    },
+    "categoryArticleLanding": {
+      "name": "categoryArticleLanding",
+      "type": "body",
+      "fields": {}
+    },
+    "productCategoryListLanding": {
+      "name": "productCategoryListLanding",
+      "type": "body"
+    }
+  }
+}

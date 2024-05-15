@@ -1,0 +1,31 @@
+{
+  "pages": [
+    {
+      "title": "Home",
+      "name": "home",
+      "demoSections": [{ "name": "homeLanding" }]
+    },
+    {
+      "title": "Product Article",
+      "name": "productArticle",
+      "demoSections": [],
+      "contentType": {
+        "name": "product",
+        "config": { "populate": ["category"] }
+      }
+    },
+    {
+      "title": "Category Article",
+      "name": "categoryArticle",
+      "demoSections": [],
+      "contentType": { "name": "category", "config": { "populate": [] } }
+    },
+    {
+      "title": "Product Category List",
+      "name": "productCategoryList",
+      "demoSections": [{ "name": "productCategoryListLanding" }],
+      "path": "/products",
+      "routeParams": "category"
+    }
+  ]
+}

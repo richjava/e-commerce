@@ -1,0 +1,12 @@
+{
+  "data": [
+    { "_id": "category", "_type": "category", "name": "Men", "slug": "men" },
+    {
+      "_id": "category",
+      "_type": "category",
+      "name": "Women",
+      "slug": "women"
+    },
+    { "_id": "category", "_type": "category", "name": "Teens", "slug": "teens" }
+  ]
+}

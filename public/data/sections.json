@@ -1,0 +1,77 @@
+{
+  "sections": [
+    {
+      "name": "header",
+      "title": "Header",
+      "data": {},
+      "templates": ["header1"],
+      "defaultTemplate": { "name": "header1" },
+      "position": "middle",
+      "collections": { "primaryMenuItem": {} }
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "templates": ["footer1"],
+      "defaultTemplate": { "name": "footer1" },
+      "position": "middle",
+      "collections": {}
+    },
+    {
+      "name": "homeLanding",
+      "title": "Home Landing",
+      "data": {
+        "image2": "/HeroImages/ba06b5a3-3cc0-4730-957a-a484b2fcbaa9.webp",
+        "heading": "Top Fashion for a top price!",
+        "blurb": "We sell only the most exclusive and high quality products for you.We are the best so come and shop with us.",
+        "image1": "/HeroImages/686dcf10-6030-4b31-967d-356f8b747732.webp"
+      },
+      "templates": ["cover1"],
+      "defaultTemplate": { "name": "cover1" },
+      "position": "middle",
+      "collections": {}
+    },
+    {
+      "name": "newestProducts",
+      "title": "Newest Products",
+      "data": { "heading": "Our Newest Products" },
+      "templates": ["block1"],
+      "defaultTemplate": { "name": "block1" },
+      "position": "middle",
+      "collections": {
+        "product": {
+          "limit": 20,
+          "offset": 1,
+          "populate": [],
+          "article": "shopProductArticle"
+        }
+      }
+    },
+    {
+      "name": "productArticleLanding",
+      "title": "Product Article Landing",
+      "data": {},
+      "templates": ["article1"],
+      "defaultTemplate": { "name": "article1" },
+      "position": "middle",
+      "collections": {}
+    },
+    {
+      "name": "categoryArticleLanding",
+      "title": "Category Article Landing",
+      "data": {},
+      "templates": ["article2"],
+      "defaultTemplate": { "name": "article2" },
+      "position": "middle",
+      "collections": {}
+    },
+    {
+      "name": "productCategoryListLanding",
+      "title": "Product Category List Landing",
+      "templates": ["list1"],
+      "defaultTemplate": { "name": "list1" },
+      "position": "middle",
+      "collections": { "product": {} }
+    }
+  ]
+}

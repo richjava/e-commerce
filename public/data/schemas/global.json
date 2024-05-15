@@ -1,0 +1,5 @@
+{
+  "global": {
+    "fields": { "name": { "default": "App Name", "type": "string" } }
+  }
+}

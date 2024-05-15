@@ -1,0 +1,5 @@
+{
+  "data": [
+    { "_type": "primaryMenuItem", "slug": "home", "label": "Home", "url": "/" }
+  ]
+}

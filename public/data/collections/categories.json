@@ -1,12 +1,12 @@
 {
   "data": [
-    { "_id": "category", "_type": "category", "name": "Men", "slug": "men" },
+    { "_id": "category-IbV1ctWSa", "_type": "category", "name": "Men", "slug": "men" },
     {
-      "_id": "category",
+      "_id": "category-N0sdgcZaZ",
       "_type": "category",
       "name": "Women",
       "slug": "women"
     },
-    { "_id": "category", "_type": "category", "name": "Teens", "slug": "teens" }
+    { "_id": "category-K9a1e7NUx", "_type": "category", "name": "Teens", "slug": "teens" }
   ]
 }

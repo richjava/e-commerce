@@ -3,6 +3,7 @@
     {
       "name": "header",
       "title": "Header",
+      "type": "layout",
       "data": {},
       "templates": ["header1"],
       "defaultTemplate": { "name": "header1" },
@@ -12,6 +13,7 @@
     {
       "name": "footer",
       "title": "Footer",
+      "type": "layout",
       "templates": ["footer1"],
       "defaultTemplate": { "name": "footer1" },
       "position": "middle",

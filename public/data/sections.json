@@ -71,7 +71,9 @@
       "templates": ["list1"],
       "defaultTemplate": { "name": "list1" },
       "position": "middle",
-      "collections": { "product": {} }
+      "collections": { "product": {
+        "params": ["category"]
+      } }
     }
   ]
 }

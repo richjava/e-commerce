@@ -6,7 +6,7 @@
       "name": "Nike Air VaporMax 2023 Flyknit",
       "description": "Elevate your sneaker game to new heights with the latest evolution of the iconic Air VaporMax series. The 2023 Flyknit combines cutting-edge technology, exceptional comfort, and bold style. Its innovative Flyknit upper offers a second-skin fit, ensuring a snug yet breathable feel with every step. The renowned VaporMax sole unit delivers unparalleled cushioning and responsiveness, providing a smooth ride that's perfect for both athletic performance and street-style fashion.",
       "price_id": "",
-      "price": "200",
+      "price": 200,
       "images": [
         { "url": "/ProductOne/3ee3420f-0395-47e9-b852-65c9e04a877d.webp" },
         { "url": "/ProductOne/600e6348-ab0e-4de4-9936-60a98594254f.webp" },
@@ -24,7 +24,7 @@
       "name": "Nike Sportswear Phoenix Fleece",
       "description": "Crafted with a blend of warmth and style, the Phoenix Fleece is a versatile addition to your wardrobe. Its soft and cozy fleece fabric offers a perfect balance of comfort and durability, making it ideal for cool days and relaxed outings. With a modern, sporty design and the iconic Nike Swoosh, this fleece adds a touch of urban flair to your look. Whether you're hitting the gym or hanging out with friends, the Nike Sportswear Phoenix Fleece keeps you both cozy and stylish. Elevate your everyday wear with this classic piece of Nike Sportswear.",
       "price_id": "",
-      "price": "35",
+      "price": 35,
       "images": [
         { "url": "/ProductTwo/795c66fd-1efc-4fb3-95c8-455ae2d390e9.png" },
         { "url": "/ProductTwo/af318846-4fcb-4b8f-b13c-f7ddfe17d519.webp" }
@@ -39,7 +39,7 @@
       "name": "Nike Air Force 1 '07",
       "description": "The Nike Air Force 1 '07 represents a legend in the world of sneakers. With a design that transcends generations, this classic silhouette has remained a symbol of street-style culture for over three decades. Its white leather upper and clean lines are a canvas for self-expression, allowing you to pair it with any outfit, from casual to chic.",
       "price_id": "",
-      "price": "85",
+      "price": 85,
       "images": [
         { "url": "/ProductThree/0453f3b6-c33b-44a6-bd68-3732ac2b8bf2.jpg" },
         { "url": "/ProductThree/3811255b-206e-4fd2-9477-1739c97ecc80.webp" },
@@ -55,7 +55,7 @@
       "name": "Nike Windrunner",
       "description": "The Nike Windrunner is more than just a jacket; it's a symbol of enduring style and performance. With a design that has stood the test of time, this lightweight and versatile outerwear piece is your go-to choice for brisk mornings, breezy afternoons, and everything in between. Its distinctive chevron design on the chest pays homage to its heritage, while the modern materials and construction ensure it's ready for the demands of today.",
       "price_id": "",
-      "price": "200",
+      "price": 200,
       "images": [
         { "url": "/ProductFour/2214184d-d5ab-4ac6-aac8-5670a08bb373.webp" },
         { "url": "/ProductFour/939da2cf-40ac-4963-ae88-a9098fd32929.jpg" },

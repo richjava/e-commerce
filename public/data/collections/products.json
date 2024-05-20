@@ -8,10 +8,10 @@
       "price_id": "",
       "price": 200,
       "images": [
-        { "url": "/ProductOne/3ee3420f-0395-47e9-b852-65c9e04a877d.webp" },
-        { "url": "/ProductOne/600e6348-ab0e-4de4-9936-60a98594254f.webp" },
+        { "url": "/images/theme/product1/3ee3420f-0395-47e9-b852-65c9e04a877d.webp" },
+        { "url": "/images/theme/product1/600e6348-ab0e-4de4-9936-60a98594254f.webp" },
         {
-          "url": "/ProductOne/air-vapormax-2023-flyknit-herrenschuh-xgCQsr.jpeg"
+          "url": "/images/theme/product1/air-vapormax-2023-flyknit-herrenschuh-xgCQsr.jpeg"
         }
       ],
       "image": { "url": "qweqwe qweqe" },
@@ -26,8 +26,8 @@
       "price_id": "",
       "price": 35,
       "images": [
-        { "url": "/ProductTwo/795c66fd-1efc-4fb3-95c8-455ae2d390e9.png" },
-        { "url": "/ProductTwo/af318846-4fcb-4b8f-b13c-f7ddfe17d519.webp" }
+        { "url": "/images/theme/product2/795c66fd-1efc-4fb3-95c8-455ae2d390e9.png" },
+        { "url": "/images/theme/product2/af318846-4fcb-4b8f-b13c-f7ddfe17d519.webp" }
       ],
       "image": "",
       "slug": "nike-sportswear-phoenix-fleece",
@@ -41,9 +41,9 @@
       "price_id": "",
       "price": 85,
       "images": [
-        { "url": "/ProductThree/0453f3b6-c33b-44a6-bd68-3732ac2b8bf2.jpg" },
-        { "url": "/ProductThree/3811255b-206e-4fd2-9477-1739c97ecc80.webp" },
-        { "url": "/ProductThree/72a3b44a-3e4c-44b7-b614-835b9d28bcc9.webp" }
+        { "url": "/images/theme/product3/0453f3b6-c33b-44a6-bd68-3732ac2b8bf2.jpg" },
+        { "url": "/images/theme/product3/3811255b-206e-4fd2-9477-1739c97ecc80.webp" },
+        { "url": "/images/theme/product3/72a3b44a-3e4c-44b7-b614-835b9d28bcc9.webp" }
       ],
       "image": "",
       "slug": "nike-air-force-1-07",
@@ -57,9 +57,9 @@
       "price_id": "",
       "price": 200,
       "images": [
-        { "url": "/ProductFour/2214184d-d5ab-4ac6-aac8-5670a08bb373.webp" },
-        { "url": "/ProductFour/939da2cf-40ac-4963-ae88-a9098fd32929.jpg" },
-        { "url": "/ProductFour/windrunner-herren-laufjacke-k4q9TV%20(1).jpeg" }
+        { "url": "/images/theme/product4/2214184d-d5ab-4ac6-aac8-5670a08bb373.webp" },
+        { "url": "/images/theme/product4/939da2cf-40ac-4963-ae88-a9098fd32929.jpg" },
+        { "url": "/images/theme/product4/windrunner-herren-laufjacke-k4q9TV%20(1).jpeg" }
       ],
       "image": "",
       "slug": "nike-windrunner",

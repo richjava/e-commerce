@@ -23,10 +23,10 @@
       "name": "homeLanding",
       "title": "Home Landing",
       "data": {
-        "image2": "/HeroImages/ba06b5a3-3cc0-4730-957a-a484b2fcbaa9.webp",
+        "image2":  {"url": "/images/theme/hero-images/ba06b5a3-3cc0-4730-957a-a484b2fcbaa9.webp"},
         "heading": "Top Fashion for a top price!",
         "blurb": "We sell only the most exclusive and high quality products for you.We are the best so come and shop with us.",
-        "image1": "/HeroImages/686dcf10-6030-4b31-967d-356f8b747732.webp"
+        "image1": {"url": "/images/theme/hero-images/686dcf10-6030-4b31-967d-356f8b747732.webp"}
       },
       "templates": ["cover1"],
       "defaultTemplate": { "name": "cover1" },

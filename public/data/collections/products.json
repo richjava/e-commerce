@@ -20,14 +20,7 @@
       ],
       "image": { "url": "qweqwe qweqe" },
       "slug": "nike-air-vapor-max-2023-flyknit",
-      "category": "category-IbV1ctWSa",
-      "files": {
-        "images": {
-          "url": "/images/theme/product1/air-vapormax-2023-flyknit-herrenschuh-xgCQsr.jpeg",
-          "type": "image",
-          "attributeName": "images"
-        }
-      }
+      "category": "category-IbV1ctWSa"
     },
     {
       "_id": "product2",
@@ -46,14 +39,7 @@
       ],
       "image": "",
       "slug": "nike-sportswear-phoenix-fleece",
-      "category": "category-N0sdgcZaZ",
-      "files": {
-        "images": {
-          "url": "/images/theme/product2/af318846-4fcb-4b8f-b13c-f7ddfe17d519.webp",
-          "type": "image",
-          "attributeName": "images"
-        }
-      }
+      "category": "category-N0sdgcZaZ"
     },
     {
       "_id": "product3",
@@ -75,14 +61,7 @@
       ],
       "image": "",
       "slug": "nike-air-force-1-07",
-      "category": "category-N0sdgcZaZ",
-      "files": {
-        "images": {
-          "url": "/images/theme/product3/72a3b44a-3e4c-44b7-b614-835b9d28bcc9.webp",
-          "type": "image",
-          "attributeName": "images"
-        }
-      }
+      "category": "category-N0sdgcZaZ"
     },
     {
       "_id": "product4",
@@ -104,14 +83,7 @@
       ],
       "image": "",
       "slug": "nike-windrunner",
-      "category": "category-K9a1e7NUx",
-      "files": {
-        "images": {
-          "url": "/images/theme/product4/windrunner-herren-laufjacke-k4q9TV%20(1).jpeg",
-          "type": "image",
-          "attributeName": "images"
-        }
-      }
+      "category": "category-K9a1e7NUx"
     }
   ]
 }

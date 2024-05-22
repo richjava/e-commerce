@@ -1,11 +1,15 @@
-import { Intro } from "@/components/shared/intro";
+// import-slot
+import CartProvider from "@/components/shared/Providers";
+// end-import-slot
 
 const Layout = (props: any) => {
   if (!props) return <></>;
   const { children, layoutComps, page } = props;
 
   return (
-    <div className="mx-auto md:w-[1000px] my-15">
+    //content-slot
+    <CartProvider>
+      {/* section-slot */}
       {page &&
         layoutComps.length > 0 &&
         layoutComps.map((Section: any, i: number) => {
@@ -16,7 +20,9 @@ const Layout = (props: any) => {
             </div>
           );
         })}
-    </div>
+     {/* end-section-slot */}
+     </CartProvider>
+     // end-content-slot
   );
 };
 

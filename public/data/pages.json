@@ -8,10 +8,12 @@
     {
       "title": "Product Article",
       "name": "productArticle",
-      "demoSections": [],
+      "demoSections": [{ "name": "productArticleLanding" }],
       "contentType": {
         "name": "product",
-        "config": { "populate": ["category"] }
+        "config": { "populate": [{
+          "name": "category"
+        }] }
       }
     },
     {

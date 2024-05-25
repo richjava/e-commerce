@@ -1,5 +1,6 @@
 // import-slot
 import CartProvider from "@/components/shared/Providers";
+import ShoppingCartModal from "@/components/shared/ShoppingCartModal";
 // end-import-slot
 
 const Layout = (props: any) => {
@@ -9,6 +10,7 @@ const Layout = (props: any) => {
   return (
     //content-slot
     <CartProvider>
+      <ShoppingCartModal />
       {/* section-slot */}
       {page &&
         layoutComps.length > 0 &&

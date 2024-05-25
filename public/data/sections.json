@@ -31,7 +31,9 @@
       "templates": ["cover1"],
       "defaultTemplate": { "name": "cover1" },
       "position": "middle",
-      "collections": {}
+      "collections": {
+        "category": {}
+      }
     },
     {
       "name": "newestProducts",
@@ -52,11 +54,9 @@
     {
       "name": "productArticleLanding",
       "title": "Product Article Landing",
-      "data": {},
       "templates": ["article1"],
       "defaultTemplate": { "name": "article1" },
-      "position": "middle",
-      "collections": {}
+      "position": "middle"
     },
     {
       "name": "categoryArticleLanding",
@@ -74,6 +74,13 @@
       "defaultTemplate": { "name": "list1" },
       "position": "middle",
       "collections": { "product": {
+        "config": {
+          "populate": [
+            {
+              "name": "category"
+            }
+          ]
+        },
         "params": ["category"]
       } }
     }

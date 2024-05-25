@@ -14,7 +14,7 @@ async function getData(path) {
   });
 }
 
-const fetchEntry = async (contentTypeName, entrySlug) => {
+const fetchEntry = async (contentTypeName, queryParams) => {
   if (!contentTypeName) {
     return null;
   }
@@ -37,12 +37,68 @@ const fetchEntry = async (contentTypeName, entrySlug) => {
   let entryData = await getData(
     `/data/collections/${camelCaseToDash(pluralize(contentType.name))}.json`
   );
+  console.log({entryData})
+  const queryString = generateQuery(queryParams);
   if (!entryData) return null;
-  let res = alasql(`SELECT * FROM ? WHERE slug ='${entrySlug}'`, [
+  let res = alasql(queryString, [
     entryData.data,
   ]);
   return res.length ? res[0] : null;
 };
+
+function generateQuery(conditions) {
+  let queryString = "SELECT * FROM ? WHERE ";
+
+  // Iterate over the conditions array and append each condition to the query string
+  conditions.forEach((condition, index) => {
+    // Get the key and value of each condition object
+    const key = Object.keys(condition)[0];
+    const value = condition[key];
+
+    // Append the key-value pair of the condition
+    queryString += `${key} = '${value}'`;
+
+    // Add 'AND' if it's not the last condition
+    if (index < conditions.length - 1) {
+        queryString += " AND ";
+    }
+});
+
+
+  return queryString;
+}
+
+// const fetchEntry = async (contentTypeName, entrySlug) => {
+//   if (!contentTypeName) {
+//     return null;
+//   }
+//   let contentTypeData = null;
+//   try {
+//     contentTypeData = require("../../../public/data/schemas/content-types.json");
+//   } catch (err) {
+//     console.error(err);
+//     return null;
+//   }
+//   if (!contentTypeData) return null;
+//   const contentTypeRes = alasql(
+//     `SELECT * FROM ? WHERE name = '${contentTypeName}'`,
+//     [contentTypeData.contentTypes]
+//   );
+//   const contentType = contentTypeRes[0] ? contentTypeRes[0] : null;
+//   if (!contentType) {
+//     return;
+//   }
+//   let entryData = await getData(
+//     `/data/collections/${camelCaseToDash(pluralize(contentType.name))}.json`
+//   );
+//   console.log({entryData})
+//   console.log(`SELECT * FROM ? WHERE slug ='${entrySlug}'`)
+//   if (!entryData) return null;
+//   let res = alasql(`SELECT * FROM ? WHERE slug ='${entrySlug}'`, [
+//     entryData.data,
+//   ]);
+//   return res.length ? res[0] : null;
+// };
 
 const fetchEntryById = async (collectionName, entryId, isMultiple) => {
   if (!collectionName) {
@@ -122,6 +178,7 @@ async function getPopulateValue(entry, pagePopConfigs) {
   for (let j = 0; j < pagePopConfigs.length; j++) {
     let popValue = null;
     const popConfig = pagePopConfigs[j];
+    console.log({popConfig})
     const populateName = popConfig.name;
     const toPopulate = entry[populateName];
     if (Array.isArray(toPopulate)) {

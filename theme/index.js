@@ -31,7 +31,8 @@
   } = require("./lib/theme/api");
 
   const { 
-    getData
+    getData,
+    fetchEntry
   } = require("./lib/theme/fetch");
 
   const { 
@@ -41,6 +42,7 @@
   module.exports = {
     getConfig,
     getData,
+    fetchEntry,
     getEntries,
     transformPage
   };

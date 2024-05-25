@@ -1,12 +1,34 @@
 import { withRouter } from "next/router";
-import { getConfig } from "@builtjs/theme";
-import Page from "../lib/page";
+import { getConfig, getEntries } from "@builtjs/theme";
+import { entrySlug } from "@/lib/utils";
+import Page from "@/lib/page";
+// FIXME
+import { GetStaticPaths,GetStaticProps } from "next";
 
 export default withRouter(Page);
 
-export async function getStaticProps() {
+// FIXME
+// export async function getStaticProps() {
+//   const config = await getConfig("productArticle");
+//   return {
+//     props: { config },
+//   };
+// }
+
+export const getStaticProps: GetStaticProps = async (context) => {
   const config = await getConfig("productArticle");
+  config.params = context.params;
   return {
-    props: { config },
+    props: { config }
+  };
+};
+
+// FIXME
+export const getStaticPaths: GetStaticPaths = async () => {
+  const name = 'product';
+  const allEntries:any = await getEntries(name);
+  return {
+    paths: allEntries.entries.map((entry: any) => `/${name}/${entrySlug(entry)}`) ?? [],
+    fallback: true,
   };
 }

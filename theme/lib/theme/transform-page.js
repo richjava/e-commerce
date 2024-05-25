@@ -41,11 +41,13 @@ const transformPage = async (pageDoc, params) => {
     }
     await page.populate("sections");
     let entry = null;
+    console.log({pageDoc})
     if (pageDoc.contentType && pageDoc.params) {
       entry = await fetchEntry(
         pageDoc.contentType.name,
-        pageDoc.params.slug
+        [{'slug': pageDoc.params.slug}]
       );
+      console.log({entry})
       if (pageDoc.contentType.config && pageDoc.contentType.config.populate) {
         entry = await getPopulateValue(entry, pageDoc.contentType.config.populate);
       }

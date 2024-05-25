@@ -1,9 +1,9 @@
-import { DataView } from "@/components/shared/data-view";
+
 export default function Article2({ content }: any) {
   if (!content) return <></>;
   return (
     <section id="article2" className="container template">
-      <DataView sectionName="Article2" content={content} />
+<h1>Test</h1><h1>Test</h1>
     </section>
   );
 }

@@ -1,1 +1,23 @@
-{ "theme": { "title": "E-commerce", "version": "1.0.0" } }
+{
+  "theme": {
+    "title": "E-commerce",
+    "version": "1.0.0",
+    "config": {
+      "node": {
+        "dependencies": [
+          "@radix-ui/react-dialog",
+          "@radix-ui/react-slot",
+          "@stripe/stripe-js",
+          "class-variance-authority",
+          "clsx",
+          "lucide-react",
+          "stripe",
+          "tailwind-merge",
+          "tailwindcss-animate",
+          "use-shopping-cart"
+        ],
+        "devDependencies": ["autoprefixer", "postcss", "tailwindcss"]
+      }
+    }
+  }
+}

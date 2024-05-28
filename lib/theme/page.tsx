@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {useRouter} from 'next/router';
 import { useParams } from 'next/navigation'
-import Layout from '../components/layout';
+import Layout from '../../components/layout';
 import {getComponents} from './utils';
 import { setupCrumbs } from ".";
-const {transformPage} = require('../theme');
+const {transformPage} = require('../../theme');
 
 const Page = ({config}: any) => {
 

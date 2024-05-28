@@ -1,7 +1,7 @@
 import { withRouter } from "next/router";
 import { getConfig, getEntries } from "@builtjs/theme";
-import { entrySlug } from "@/lib/utils";
-import Page from "@/lib/page";
+import { entrySlug } from "@/lib/theme/utils";
+import Page from "@/lib/theme/page";
 // FIXME
 import { GetStaticPaths,GetStaticProps } from "next";
 

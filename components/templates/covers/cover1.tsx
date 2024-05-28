@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { urlForImage } from "@/lib/utils";
+import { urlForImage } from "@/builtjs-utils";
 
 export default function Cover1({ content }: any) {
   if (!content) return <></>;

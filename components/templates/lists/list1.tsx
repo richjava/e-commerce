@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { urlForImage } from "@/lib/utils";
+import { urlForImage } from "@/builtjs-utils";
 import { fetchEntry } from "../../../theme";
 
 export default function List1({ content }: any) {

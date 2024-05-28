@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { urlForImage } from "@/lib/utils";
+import { urlForImage } from "@/builtjs-utils";
 import { useState } from "react";
 
 interface iAppProps {

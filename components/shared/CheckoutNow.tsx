@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/shared/Button";
 import { useShoppingCart } from "use-shopping-cart";
-import { urlForImage } from "@/lib/utils";
+import { urlForImage } from "@/builtjs-utils";
 import { ProductCart } from "./AddToBag";
 
 export default function CheckoutNow({

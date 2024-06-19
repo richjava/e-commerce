@@ -37,7 +37,6 @@ const fetchEntry = async (contentTypeName, queryParams) => {
   let entryData = await getData(
     `/data/collections/${camelCaseToDash(pluralize(contentType.name))}.json`
   );
-  console.log({entryData})
   const queryString = generateQuery(queryParams);
   if (!entryData) return null;
   let res = alasql(queryString, [
@@ -64,41 +63,8 @@ function generateQuery(conditions) {
     }
 });
 
-
   return queryString;
 }
-
-// const fetchEntry = async (contentTypeName, entrySlug) => {
-//   if (!contentTypeName) {
-//     return null;
-//   }
-//   let contentTypeData = null;
-//   try {
-//     contentTypeData = require("../../../public/data/schemas/content-types.json");
-//   } catch (err) {
-//     console.error(err);
-//     return null;
-//   }
-//   if (!contentTypeData) return null;
-//   const contentTypeRes = alasql(
-//     `SELECT * FROM ? WHERE name = '${contentTypeName}'`,
-//     [contentTypeData.contentTypes]
-//   );
-//   const contentType = contentTypeRes[0] ? contentTypeRes[0] : null;
-//   if (!contentType) {
-//     return;
-//   }
-//   let entryData = await getData(
-//     `/data/collections/${camelCaseToDash(pluralize(contentType.name))}.json`
-//   );
-//   console.log({entryData})
-//   console.log(`SELECT * FROM ? WHERE slug ='${entrySlug}'`)
-//   if (!entryData) return null;
-//   let res = alasql(`SELECT * FROM ? WHERE slug ='${entrySlug}'`, [
-//     entryData.data,
-//   ]);
-//   return res.length ? res[0] : null;
-// };
 
 const fetchEntryById = async (collectionName, entryId, isMultiple) => {
   if (!collectionName) {
@@ -146,9 +112,11 @@ const fetchCollections = async (section, params) => {
     return [];
   }
   let newCollections = {};
-  
-  const whereClause = Object.entries(params).map(([key, value]) => `${key} = '${value}'`).join(' AND ');
-  
+  const whereClause = section.params ? Object.entries(params)
+  .filter(([key, value]) => key in section.params) // Check if the key exists in section.params
+  .map(([key, value]) => `${key} = '${value}'`)
+  .join(' AND ') : '';
+
   for (const key in section.collections) {
     const collection = section.collections[key];
     let limit = collection.limit;
@@ -178,7 +146,6 @@ async function getPopulateValue(entry, pagePopConfigs) {
   for (let j = 0; j < pagePopConfigs.length; j++) {
     let popValue = null;
     const popConfig = pagePopConfigs[j];
-    console.log({popConfig})
     const populateName = popConfig.name;
     const toPopulate = entry[populateName];
     if (Array.isArray(toPopulate)) {

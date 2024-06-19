@@ -1,6 +1,7 @@
 {
   "modules": [
     {
+      "name": "shop",
       "title": "Shop",
       "description": "Sell products",
       "modulePages": [

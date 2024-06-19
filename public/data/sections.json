@@ -84,5 +84,27 @@
         "params": ["category"]
       } }
     }
+
+
+    ,
+    {
+      "name": "productRelatedArticles",
+      "title": "Product Related Articles",
+      "description": "A list of related articles to and excluding the currently viewed article.",
+      "templates": ["list1", "list2"],
+      "defaultTemplate": {
+        "name": "list2"
+      },
+      "data": {
+        "columns": 3
+      },
+      "collections": {
+        "product": {
+          "article": {
+            "name": "productArticle"
+          }
+        }
+        }
+      }
   ]
 }

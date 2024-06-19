@@ -1,5 +1,5 @@
 import { withRouter } from "next/router";
-import { getConfig, getEntries } from "@builtjs/theme";
+import { getConfig, getEntries } from "../../theme";
 import { entrySlug } from "@/lib/theme/utils";
 import Page from "@/lib/theme/page";
 // FIXME
@@ -16,7 +16,7 @@ export default withRouter(Page);
 // }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const config = await getConfig("productArticle");
+  const config = await getConfig({pageName: "productArticle"});
   config.params = context.params;
   return {
     props: { config }

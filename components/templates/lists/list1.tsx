@@ -9,13 +9,13 @@ import { urlForImage, entrySlug } from "@/builtjs-utils";
 export default function List1({ content, api }: any) {
   if (!content) return <></>;
   const [category, setCategory] = useState<any>(null);
-  let { fetchOne = null } = { ...api };
+  let { fetchEntry = null } = { ...api };
   const params = useParams<{ category: string }>();
   
   useEffect(() => {
     async function fetchData() {
       if (params && params.category && !category) {
-        const cat = await fetchOne("category", [{ _id: params.category }]);
+        const cat = await fetchEntry("category", [{ _id: params.category }]);
         setCategory(cat);
       }
     }

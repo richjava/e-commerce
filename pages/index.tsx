@@ -5,7 +5,7 @@ import Page from "../lib/theme/page";
 export default withRouter(Page);
 
 export async function getStaticProps() {
-  const config = await getConfig("home");
+  const config = await getConfig({pageName: "home"});
   return {
     props: { config },
   };

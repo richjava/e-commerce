@@ -4,7 +4,7 @@ import { useParams } from 'next/navigation'
 import Layout from '../../components/layout';
 import {getComponents} from './utils';
 import { setupCrumbs } from ".";
-const {transformPage} = require('../../theme');
+const {transformPage, fetchEntry} = require('@builtjs/theme');
 
 const Page = ({config}: any) => {
 
@@ -53,7 +53,10 @@ const Page = ({config}: any) => {
               sectionComps.map((Section: any, i: number) => {
                 return (
                   page.sections[i] && (
-                    <Section key={i} content={page.sections[i].content} />
+                    <Section 
+                    key={i} 
+                    api={page.sections[i].template.doc.type === 'dynamic' ? {fetchEntry} : null} 
+                    content={page.sections[i].content} />
                   )
                 );
               })}

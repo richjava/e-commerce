@@ -4,21 +4,23 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { urlForImage } from "@/builtjs-utils";
-import { fetchEntry } from "../../../theme";
+import { urlForImage, entrySlug } from "@/builtjs-utils";
 
-export default function List1({ content }: any) {
+export default function List1({ content, api }: any) {
   if (!content) return <></>;
   const [category, setCategory] = useState<any>(null);
-
+  let { fetchOne = null } = { ...api };
   const params = useParams<{ category: string }>();
+  
   useEffect(() => {
     async function fetchData() {
-      const entry = await fetchEntry("category", [{ _id: params.category }]);
-      setCategory(entry);
+      if (params && params.category && !category) {
+        const cat = await fetchOne("category", [{ _id: params.category }]);
+        setCategory(cat);
+      }
     }
     fetchData();
-  }, []); // Empty dependency array to ensure useEffect only runs once
+  }, [params, category]);
 
   let { collections = null } = { ...content };
   if (!collections) {
@@ -26,7 +28,6 @@ export default function List1({ content }: any) {
   }
   let collectionName = Object.keys(collections)[0];
   let products = collections[collectionName];
-
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 sm:px-6  lg:max-w-7xl lg:px-8">
@@ -42,7 +43,7 @@ export default function List1({ content }: any) {
           {products.map((product: any) => (
             <div key={product._id} className="group relative">
               <div className="aspect-square w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:h-80">
-                <Link href={`/product/${product.slug}`}>
+                <Link href={`/product/${entrySlug(product)}`}>
                   <Image
                     src={urlForImage(product.images[0])}
                     alt="Product image"
@@ -56,7 +57,7 @@ export default function List1({ content }: any) {
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700">
-                    <Link href={`/product/${product.slug}`}>
+                    <Link href={`/product/${entrySlug(product)}`}>
                       {product.name}
                     </Link>
                   </h3>

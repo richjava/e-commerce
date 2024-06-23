@@ -3,21 +3,12 @@
     { "title": "Header 1", "name": "header1", "category": "headers" },
     { "title": "Footer 1", "name": "footer1", "category": "footers" },
     { "title": "Cover 1", "name": "cover1", "category": "covers" },
-    { "title": "Block 1", "name": "block1", "category": "blocks" },
     { "title": "Article 1", "name": "article1", "category": "articles" },
-    { "title": "Article 2", "name": "article2", "category": "articles" },
     {
       "title": "List 1",
       "name": "list1",
       "category": "lists",
       "type": "dynamic"
-    },
-
-    {
-      "name": "list2",
-      "title": "List 2",
-      "category": "lists",
-      "description": "List of items with three equal columns, left aligned content and an image."
     }
   ]
 }

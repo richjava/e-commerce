@@ -35,39 +35,16 @@
       }
     },
     {
-      "name": "newestProducts",
-      "title": "Newest Products",
-      "data": { "heading": "Our Newest Products" },
-      "templates": ["block1"],
-      "defaultTemplate": { "name": "block1" },
-      "collections": {
-        "product": {
-          "limit": 20,
-          "offset": 1,
-          "populate": [],
-          "article": "shopProductArticle"
-        }
-      }
-    },
-    {
       "name": "productArticleLanding",
       "title": "Product Article Landing",
       "templates": ["article1"],
       "defaultTemplate": { "name": "article1" }
     },
     {
-      "name": "categoryArticleLanding",
-      "title": "Category Article Landing",
-      "data": {},
-      "templates": ["article2"],
-      "defaultTemplate": { "name": "article2" },
-      "collections": {}
-    },
-    {
       "name": "productCategoryListLanding",
       "title": "Product Category List Landing",
       "templates": ["list1"],
-      "defaultTemplate": { "name": "list1" },
+      "defaultTemplate": { "name": "list1" },   
       "collections": { "product": {
         "config": {
           "populate": [
@@ -79,27 +56,5 @@
         "params": ["category"]
       } }
     }
-
-
-    ,
-    {
-      "name": "productRelatedArticles",
-      "title": "Product Related Articles",
-      "description": "A list of related articles to and excluding the currently viewed article.",
-      "templates": ["list1", "list2"],
-      "defaultTemplate": {
-        "name": "list2"
-      },
-      "data": {
-        "columns": 3
-      },
-      "collections": {
-        "product": {
-          "article": {
-            "name": "productArticle"
-          }
-        }
-        }
-      }
   ]
 }

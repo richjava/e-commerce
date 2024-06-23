@@ -10,13 +10,7 @@
       "title": "Shop Product Article",
       "name": "shopProductArticle",
       "page": { "name": "productArticle" },
-      "sections": [{ "name": "productArticleLanding" }, { "name": "productRelatedArticles" }]
-    },
-    {
-      "title": "Shop Category Article",
-      "name": "shopCategoryArticle",
-      "page": { "name": "categoryArticle" },
-      "sections": [{ "name": "categoryArticleLanding" }]
+      "sections": [{ "name": "productArticleLanding" }]
     },
     {
       "title": "Shop Product Category List",

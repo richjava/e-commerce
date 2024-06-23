@@ -6,10 +6,9 @@ import { GetStaticPaths, GetStaticProps  } from "next";
 
 export default withRouter(Page);
 
-export const getStaticProps: GetStaticProps = async ({params}) => {
+export const getStaticProps: GetStaticProps = async () => {
   const config = await getConfig({
-    pageName:"productCategoryList", 
-    params
+    pageName:"productCategoryList"
   });
   return {
     props: { config },

@@ -112,19 +112,20 @@ const fetchCollections = async (section, params) => {
     return [];
   }
   let newCollections = {};
-  const whereClause = section.params ? Object.entries(params)
-  .filter(([key, value]) => key in section.params) // Check if the key exists in section.params
-  .map(([key, value]) => `${key} = '${value}'`)
-  .join(' AND ') : '';
-
   for (const key in section.collections) {
     const collection = section.collections[key];
     let limit = collection.limit;
+    let orderBy = collection.orderBy;
+    let offset = collection.offset;
     let entryData = await getData(
       `/data/collections/${camelCaseToDash(pluralize(key))}.json`
     );
     if (!entryData) return null;
-    let res = alasql(`SELECT * FROM ? ${whereClause ? "WHERE " + whereClause : ''} ` + (limit ? ` LIMIT ${limit}` : ""), [
+    const whereClause = collection.params ? Object.entries(params)
+    .filter(([key, value]) => collection.params.includes(key)) // Check if the key exists in section.params
+    .map(([key, value]) => `${key} = '${value}'`)
+    .join(' AND ') : '';
+    let res = alasql(`SELECT * FROM ? ${whereClause ? "WHERE " + whereClause : ''}` + (!orderBy && limit ? ` LIMIT ${limit}` : "") + ((!orderBy && offset) ? ` offset ${offset}` : "") + (orderBy ? ` ORDER BY ${orderBy.field} ${orderBy.sortOrder}` : ""), [
       entryData.data,
     ]);
     let newCollection = { ...collection };
